@@ -42,7 +42,7 @@ const ProductScreen = () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
         const result = await axios.get(
-          `http://localhost:5000/api/products/slug/${slug}`
+          `https://mern-amazon-app-lck1.onrender.com/api/products/slug/${slug}`
         );
         console.log(result);
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
@@ -61,7 +61,7 @@ const ProductScreen = () => {
     const exeistItem = cart.cartItems.find((x) => x._id === product._id);
     const quantity = exeistItem ? exeistItem.quantity + 1 : 1;
     const { data } = await axios.get(
-      `http://localhost:5000/api/products/${product._id}`
+      `https://mern-amazon-app-lck1.onrender.com/api/products/${product._id}`
     );
     if (data.countInStock < quantity) {
       window.alert("Sorry, Product is out of stock");

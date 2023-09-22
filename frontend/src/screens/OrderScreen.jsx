@@ -43,7 +43,7 @@ const OrderScreen = () => {
       try {
         dispatch({ type: "FETCH_REQUEST" });
         const { data } = await axios.get(
-          `http://localhost:5000/api/orders/${orderId}`,
+          `https://mern-amazon-app-lck1.onrender.com/api/orders/${orderId}`,
           {
             headers: { authorization: `Bearer ${userInfo.token}` },
           }
