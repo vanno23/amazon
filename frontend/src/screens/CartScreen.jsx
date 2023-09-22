@@ -18,7 +18,7 @@ const CartScreen = () => {
 
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(
-      `https://mern-amazon-app-lck1.onrender.com/api/products/${item._id}`
+      `https://mern-amazon-app-obmv.onrender.com/api/products/${item._id}`
     );
     if (data.countInStock < quantity) {
       window.alert("Sorry, Product is out of stock");

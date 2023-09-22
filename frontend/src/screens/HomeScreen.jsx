@@ -32,7 +32,7 @@ const HomeScreen = () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
         const result = await axios.get(
-          "https://mern-amazon-app-lck1.onrender.com/api/products"
+          "https://mern-amazon-app-obmv.onrender.com/api/products"
         );
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
       } catch (err) {
