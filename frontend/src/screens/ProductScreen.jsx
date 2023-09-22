@@ -42,7 +42,7 @@ const ProductScreen = () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
         const result = await axios.get(
-          `https://mern-amazon-app-bf2l.onrender.com/api/products/slug/${slug}`
+          `http://localhost:5000/api/products/slug/${slug}`
         );
         console.log(result);
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });

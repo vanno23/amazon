@@ -33,7 +33,7 @@ const SignupScreen = () => {
     }
     try {
       const { data } = await axios.post(
-        "https://mern-amazon-app-bf2l.onrender.com/api/users/signup",
+        "http://localhost:5000/api/users/signup",
         {
           name,
           email,

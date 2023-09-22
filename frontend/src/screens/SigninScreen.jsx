@@ -25,7 +25,7 @@ const SigninScreen = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://mern-amazon-app-bf2l.onrender.com/api/users/signin",
+        "http://localhost:5000/api/users/signin",
         {
           email,
           password,

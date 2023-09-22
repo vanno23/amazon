@@ -49,7 +49,7 @@ export default function PlaceOrderScreen() {
       dispatch({ type: "CREATE_REQUEST" });
 
       const { data } = await axios.post(
-        "https://mern-amazon-app-bf2l.onrender.com/api/orders",
+        "http://localhost:5000/api/orders",
         {
           orderItems: cart.cartItems,
           shippingAddress: cart.shippingAddress,

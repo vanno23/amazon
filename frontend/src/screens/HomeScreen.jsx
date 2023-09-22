@@ -31,9 +31,7 @@ const HomeScreen = () => {
     const fetchData = async () => {
       dispatch({ type: "FETCH_REQUEST" });
       try {
-        const result = await axios.get(
-          "https://mern-amazon-app-bf2l.onrender.com/api/products"
-        );
+        const result = await axios.get("http://localhost:5000/api/products");
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
